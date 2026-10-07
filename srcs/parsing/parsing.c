@@ -15,6 +15,6 @@
 bool	ft_parsing_data(int argc, char **argv, t_config *conf)
 {
 	if (argc == 9 && ft_validation_args(argv))
-		return (ft_converter(argv, conf));
+		return (ft_converter(argv, conf), true);
 	return (false);
 }

@@ -38,20 +38,26 @@
   |        VARIABLES         |
   +==========================+*/
 
+typedef enum e_scheduler_type
+{
+	SCHEDULER_FIFO,
+	SCHEDULER_EDF	
+}	t_scheduler_type;
+
 /*+==========================+
   |         STRUCTS          |
   +==========================+*/
 
 typedef struct s_config
 {
-	long		num_coders;	
-	long	time_to_burnout;
-	long	time_to_compile;
-	long	time_to_debug;
-	long	time_to_refactor;
-	long	num_compiles_req;
-	long	dongle_cooldown;
-	char	*scheduler;	//"fifo" o "edf"
+	long				num_coders;	
+	long				time_to_burnout;
+	long				time_to_compile;
+	long				time_to_debug;
+	long				time_to_refactor;
+	long				num_compiles_req;
+	long				dongle_cooldown;
+	t_scheduler_type	scheduler;	//"fifo" o "edf"
 }	t_config;
 
 /*+==========================+

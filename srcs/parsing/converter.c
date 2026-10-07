@@ -33,7 +33,7 @@ long	ft_atol(char *s)
 	return (nbr);
 }
 
-bool	ft_converter(char **argv, t_config *config)
+void	ft_converter(char **argv, t_config *config)
 {
 	config->num_coders = ft_atol(argv[1]);
 	config->time_to_burnout = ft_atol(argv[2]);
@@ -42,6 +42,8 @@ bool	ft_converter(char **argv, t_config *config)
 	config->time_to_refactor = ft_atol(argv[5]);
 	config->num_compiles_req = ft_atol(argv[6]);
 	config->dongle_cooldown = ft_atol(argv[7]);
-	config->scheduler = argv[8];
-	return (true);
+	if (strcmp(argv[8], "fifo") == 0)
+		config->scheduler = SCHEDULER_FIFO;
+	else
+		config->scheduler = SCHEDULER_EDF;
 }

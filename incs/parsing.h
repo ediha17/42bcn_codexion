@@ -39,7 +39,7 @@
   +==========================+*/
 
 bool	ft_parsing_data(int argc, char **argv, t_config *conf);
-bool	ft_converter(char **argv, t_config *config);
+void	ft_converter(char **argv, t_config *config);
 bool	ft_validation_args(char **argv);
 bool	ft_is_numeric_str(char *str);
 long	ft_atol(char *s);
