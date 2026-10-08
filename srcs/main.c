@@ -19,6 +19,7 @@ int	main(int argc, char *argv[])
 
 	memset(&config, 0, sizeof(t_config));
 	if (ft_parsing_data(argc, argv, &config))
+
 		printf("si\n");
 	else
 	{
