@@ -73,7 +73,6 @@ struct s_heap_queue
 	int					size;
 	int					capacity;
 	t_scheduler_type	*scheduler_ref;
-
 };
 
 struct s_heap_node
